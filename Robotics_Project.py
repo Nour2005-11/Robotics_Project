@@ -150,8 +150,6 @@ class Simulation:
         self.font = pygame.font.SysFont("Arial", 24)
         self.clock = pygame.time.Clock()
 
-        # --- التعديل الرئيسي هنا ---
-        # تحديد مسار مجلد الصور بشكل نسبي ومرن
         # __file__ هو متغير خاص في بايثون يحتوي على مسار الملف الحالي
         current_path = os.path.dirname(os.path.abspath(__file__))
         assets_path = os.path.join(current_path, "assets")
@@ -164,8 +162,8 @@ class Simulation:
                 'ground': pygame.transform.scale(pygame.image.load(os.path.join(assets_path, "ground.png")).convert(), (CELL_SIZE, CELL_SIZE)),
             }
         except pygame.error as e:
-            print(f"خطأ في تحميل الصور: {e}")
-            print(f"تأكد من وجود مجلد 'assets' بجانب ملف البايثون ويحتوي على الصور المطلوبة.")
+            print(f"Error Loading The Image: {e}")
+            print(f"Be Sure that asstes Folder is beside the python file.")
             sys.exit()
 
     def draw_grid(self):
