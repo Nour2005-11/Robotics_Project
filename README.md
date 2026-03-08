@@ -62,5 +62,3 @@ python robot_simulation.py
 
 The Pygame window will open, displaying the robot simulation. The robot will plan its path and move towards the goal, with its state displayed in an info panel.
 
-## Author
-Manus AI
